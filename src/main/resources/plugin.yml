@@ -1,6 +1,6 @@
 name: SGTowny
-main: net.TheDgtl.SGTowny.SGTowny
-version: 0.0.1
+main: net.betterverse.townsgates.TownsGates
+version: "${project.version}"
 description: Stargate Towny Integration for BetterCraft
 author: Drakia
 website: http://forum.bettercraft.net/

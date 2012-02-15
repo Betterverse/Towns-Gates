@@ -1,4 +1,4 @@
-package net.betterverse.SGTowny;
+package net.betterverse.townsgates;
 
 import java.util.ArrayList;
 
