@@ -1,0 +1,20 @@
+name: SGTowny
+main: net.TheDgtl.SGTowny.SGTowny
+version: 0.0.1
+description: Stargate Towny Integration for BetterCraft
+author: Drakia
+website: http://forum.bettercraft.net/
+depend:
+  - Stargate
+  - Towns
+
+commands:
+  sgtowny:
+    description: Reload SGTowny's configuration and database
+    usage: /<command> reload - Reload SGTowny's config and database
+    aliases: [sgt]
+    
+permissions:
+  sgtowny.admin:
+    description: Allow use of /sgt reload
+    default: op

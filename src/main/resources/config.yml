@@ -1,0 +1,9 @@
+# SGTowny Default Configuration
+# Please edit to suit your needs.
+
+# Maximum gates a town can have
+maxGates: 10
+# The minimum amount of residents for a town to have to be allowed Town Gates
+minResidents: 10
+# A list of gate layouts allowed as town gates
+gateList: [nethergate]
