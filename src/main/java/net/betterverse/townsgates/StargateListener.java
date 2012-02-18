@@ -42,14 +42,10 @@ public class StargateListener implements Listener {
 		}
 		
 		// Check if we have a resident.
-		Resident res = null;
-        try {
-            res = sgt.getTowny().getTownsUniverse().getResident(player.getName());
-        } catch (NotRegisteredException ex) {
-        }
+		Resident res = sgt.getResident(player.getName());
 		
 		// Check if the resident is mayor or an assistant
-		if (!town.isMayor(res) && !town.hasAssistant(res)) {
+		if (res == null || !town.isMayor(res) && !town.hasAssistant(res)) {
 			return;
 		}
 		
@@ -108,14 +104,10 @@ public class StargateListener implements Listener {
 		if (town == null) return;
 		
 		// Check if the player is a resident
-		Resident res = null;
-        try {
-            res = sgt.getTowny().getTownsUniverse().getResident(player.getName());
-        } catch (NotRegisteredException ex) {
-        }
+		Resident res = sgt.getResident(player.getName());
 		
 		// Check if the resident is mayor or an assistant
-		if (!town.isMayor(res) && !town.hasAssistant(res)) {
+		if (res == null || !town.isMayor(res) && !town.hasAssistant(res)) {
 			return;
 		}
 		
@@ -136,13 +128,9 @@ public class StargateListener implements Listener {
 		Town town = sgt.getTown(townName);
 		if (town == null) return;
 		// Check if the player is a resident
-		Resident res = null;
-        try {
-            res = sgt.getTowny().getTownsUniverse().getResident(player.getName());
-        } catch (NotRegisteredException ex) {
-        }
+		Resident res = sgt.getResident(player.getName());
 		
-		if (!town.hasResident(res)) {
+		if (res == null || !town.hasResident(res)) {
 			event.setDeny(true);
 			return;
 		}

@@ -12,11 +12,7 @@ import net.TheDgtl.Stargate.Blox;
 
 import net.betterverse.towns.NotRegisteredException;
 import net.betterverse.towns.Towns;
-import net.betterverse.towns.object.Coord;
-import net.betterverse.towns.object.Town;
-import net.betterverse.towns.object.TownsUniverse;
-import net.betterverse.towns.object.TownsWorld;
-import net.betterverse.towns.object.WorldCoord;
+import net.betterverse.towns.object.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -47,7 +43,7 @@ public class TownsGates extends JavaPlugin {
 		// Register Listeners
 		getServer().getPluginManager().registerEvents(new StargateListener(this), this);
 		
-		towny = (Towns)getServer().getPluginManager().getPlugin("Towny");
+		towny = (Towns)getServer().getPluginManager().getPlugin("Towns");
 	}
 	
 	public void onDisable() {
@@ -185,6 +181,14 @@ public class TownsGates extends JavaPlugin {
 			return null;
 		}
 	}
+        
+	public Resident getResident(String name) {
+		try {
+			return towny.getTownsUniverse().getResident(name);
+		} catch (NotRegisteredException ex) {
+			return null;
+		}
+	}
 	
 	public void addPortal(String name, String network, String town) {
 		portals.put(name + ":" + network, town);
@@ -207,11 +211,6 @@ public class TownsGates extends JavaPlugin {
 			return maxTownId;
 		}
 		return townId;
-	}
-	
-	// Getters
-	public Towns getTowny() {
-		return towny;
 	}
 	
 	public int getMaxGates() {
