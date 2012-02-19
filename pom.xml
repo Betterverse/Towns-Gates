@@ -50,6 +50,7 @@
 				<filtering>true</filtering>
 				<includes>
 					<include>*.yml</include>
+					<include>*.jar</include>
 				</includes>
 			</resource>
 		</resources>
