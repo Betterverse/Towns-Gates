@@ -7,12 +7,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
-
 import net.TheDgtl.Stargate.Blox;
-
 import net.betterverse.towns.NotRegisteredException;
 import net.betterverse.towns.Towns;
-import net.betterverse.towns.object.*;
+import net.betterverse.towns.object.Coord;
+import net.betterverse.towns.object.Resident;
+import net.betterverse.towns.object.Town;
+import net.betterverse.towns.object.TownsUniverse;
+import net.betterverse.towns.object.TownsWorld;
+import net.betterverse.towns.object.WorldCoord;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
